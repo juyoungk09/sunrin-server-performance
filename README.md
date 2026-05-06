@@ -34,7 +34,7 @@ vi named.conf.options
 (위에 코드 따라쓰고 esc 눌러서 명령모드로 돌아온 뒤) 
 :wq
 
-ifconfig ens33 <- ip 주소 확인 168.X.X.X
+ifconfig ens33 <- ip 주소 확인
 
 (만약 ifconfig 명령어가 없다고 뜨면 apt install net-tools 후 다시 ifconfig ens33)
 
