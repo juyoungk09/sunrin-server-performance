@@ -17,10 +17,12 @@ vi named.conf.options
 :set nu
 
 (21번줄 내용 지우고 그부분부터 아래 코드 작성)
+
+
 	dnssec-validation no;
 	recursion yes;
 	allow-query { any; };
-	
+    
 	forwarders {
 		8.8.8.8;
 		1.1.1.1;
@@ -56,10 +58,10 @@ vi named.conf.local
 
 (중요: ** 만약 woojak.com이 아닌 다른 도메인을 쓰고 싶으면 앞으로 나올 모든 woojak.com을 본인이 원하는 도메인으로 바꿔주면 됨 **)
 
-zone "woojak.com" IN {
-		type master;
-		file "/etc/bind/db.woojak.com";
-	};
+    zone "woojak.com" IN {
+            type master;
+            file "/etc/bind/db.woojak.com";
+        };
 
 (이후 esc 눌러서 명령모드로 돌아온 뒤 저장)
 :wq
