@@ -39,11 +39,12 @@ ifconfig ens33 <- ip 주소 확인
 (만약 ifconfig 명령어가 없다고 뜨면 apt install net-tools 후 다시 ifconfig ens33)
 
 vi /etc/resolv.conf
+
 (기존 nameserver 적혀있는 부분 주석 처리하세요 -> 주석 처리 방법은 줄 맨앞에 # 붙이기)
 nameserver {방금 전 실행한 ifconfig ens33에서 나온 ip 주소}
 
-systemctl restart named
-systemctl enable named
+systemctl restart named  
+systemctl enable named  
 systemctl status named <- 서버 상태 확인
 
 (nslookup server 해서 한번 확인하기)
@@ -63,14 +64,15 @@ vi named.conf.local
             file "/etc/bind/db.woojak.com";
         };
 
-(이후 esc 눌러서 명령모드로 돌아온 뒤 저장)
+(이후 esc 눌러서 명령모드로 돌아온 뒤 저장)  
 :wq
 
 
 cp db.local db.woojak.com
+
 vi db.woojak.com
 
-(첨부파일 내용 따라 쓰기)
+(첨부파일 내용 따라 쓰기)  
 (첨부파일에서 sy.com을 본인 도메인으로 바꿔서 작성 + ip 주소도 본인 서버 ip 주소로 바꿔서 작성)
 
 
