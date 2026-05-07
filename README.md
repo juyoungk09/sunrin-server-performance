@@ -40,7 +40,7 @@ ifconfig ens33 <- ip 주소 확인
 
 vi /etc/resolv.conf
 
-(기존 nameserver 적혀있는 부분 주석 처리하세요 -> 주석 처리 방법은 줄 맨앞에 # 붙이기)
+(기존 nameserver 적혀있는 부분 주석 처리하세요 -> 주석 처리 방법은 줄 맨앞에 # 붙이기)  
 nameserver {방금 전 실행한 ifconfig ens33에서 나온 ip 주소}
 
 systemctl restart named  
