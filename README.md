@@ -28,7 +28,6 @@ vi named.conf.options
 		1.1.1.1;
 	};
 	forward only;
-	listen-on-v6 { any; };
 
 
 (위에 코드 따라쓰고 esc 눌러서 명령모드로 돌아온 뒤) 
