@@ -41,14 +41,16 @@ ifconfig ens33 <- ip 주소 확인
 vi /etc/resolv.conf
 
 (기존 nameserver 적혀있는 부분 주석 처리하세요 -> 주석 처리 방법은 줄 맨앞에 # 붙이기)  
-nameserver {방금 전 실행한 ifconfig ens33에서 나온 ip 주소}
+    nameserver {방금 전 실행한 ifconfig ens33에서 나온 ip 주소}
+
+
+(nslookup server 해서 한번 확인하기)  
+named-checkconf /etc/bind/named.conf.options
 
 systemctl restart named  
 systemctl enable named  
 systemctl status named <- 서버 상태 확인
 
-(nslookup server 해서 한번 확인하기)  
-named-checkconf /etc/bind/named.conf.options
 
 # 마스터 서버
 cd /etc/bind
