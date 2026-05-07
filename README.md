@@ -90,7 +90,7 @@ systemctl restart apache2
 systemctl enable apache2
 
 
-https://(ifconfig 해서 나왔던 ip 주소) 들어가서 확인하기
+https://{본인이 설정한 도메인}들어가서 확인하기
 
 cd /var/www/html
 
