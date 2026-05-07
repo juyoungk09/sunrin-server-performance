@@ -47,7 +47,7 @@ systemctl restart named
 systemctl enable named  
 systemctl status named <- 서버 상태 확인
 
-(nslookup server 해서 한번 확인하기)
+(nslookup server 해서 한번 확인하기)  
 named-checkconf /etc/bind/named.conf.options
 
 # 마스터 서버
